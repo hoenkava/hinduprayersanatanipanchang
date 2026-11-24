@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hindu Prayer – Sanatani Panchang</title>
+<meta name="description" content="Daily Panchang, Bhagavad Geeta verse, Virtual Darshan, Jap Mala, Kundli and more — your daily Sanatan companion, in 8 languages.">
+<meta property="og:title" content="Hindu Prayer – Sanatani Panchang">
+<meta property="og:description" content="Daily Panchang, Geeta verse, Virtual Darshan, Jap Mala, Kundli and more.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F59519">
+<style>
+  :root{
+    --s50:#FFF8ED; --s100:#FFEFD4; --s200:#FFDBA8; --s300:#FFC170;
+    --s400:#FD9F37; --s500:#F59519; --s600:#D96F0A; --s700:#B4520B;
+    --s800:#8F4010; --s900:#3D1B01;
+    --ink:#2A1607; --muted:#6B4A2E; --card:#FFFFFF; --line:#F3DFC2;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari",sans-serif;
+    color:var(--ink); background:var(--s50); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--s700)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,248,237,.88);
+      backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
+      border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--ink)}
+  .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+        background:linear-gradient(135deg,var(--s400),var(--s700));color:#fff;font-size:19px}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{text-decoration:none;color:var(--muted);font-size:15px}
+  nav ul a:hover{color:var(--s700)}
+  @media (max-width:640px){nav ul{display:none}}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:84px 0 72px;text-align:center;
+        background:radial-gradient(1100px 520px at 50% -10%,var(--s200),transparent 70%)}
+  .om{font-size:64px;line-height:1;color:var(--s600);margin-bottom:18px}
+  h1{font-size:clamp(34px,6vw,56px);line-height:1.1;letter-spacing:-.02em;color:var(--s900)}
+  h1 span{color:var(--s600)}
+  .lead{max-width:640px;margin:18px auto 30px;font-size:clamp(17px,2.2vw,20px);color:var(--muted)}
+  .stores{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:14px;
+       font-weight:600;text-decoration:none;font-size:16px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--s500);color:#fff;box-shadow:0 8px 22px rgba(217,111,10,.28)}
+  .btn-dark{background:var(--s900);color:#fff}
+  .btn small{display:block;font-weight:400;font-size:11px;opacity:.85;line-height:1}
+  .btn b{display:block;line-height:1.2}
+  .langs{margin-top:28px;font-size:14px;color:var(--muted)}
+  .langs span{display:inline-block;margin:4px 3px;padding:4px 10px;border-radius:999px;
+              background:#fff;border:1px solid var(--line)}
+
+  /* Sections */
+  section{padding:72px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700;color:var(--s600);text-align:center}
+  h2{font-size:clamp(26px,4vw,38px);text-align:center;color:var(--s900);margin:8px 0 12px;letter-spacing:-.01em}
+  .sub{max-width:600px;margin:0 auto 44px;text-align:center;color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;
+        transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 14px 34px rgba(143,64,16,.10);transform:translateY(-3px)}
+  .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;
+      background:var(--s100);margin-bottom:14px}
+  .card h3{font-size:18px;color:var(--s900);margin-bottom:6px}
+  .card p{font-size:15px;color:var(--muted)}
+
+  /* Daily rhythm */
+  .rhythm{background:linear-gradient(180deg,#fff,var(--s50))}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .step{padding:24px;border-radius:var(--radius);background:var(--s100);border:1px solid var(--s200)}
+  .step .t{font-size:13px;font-weight:700;color:var(--s700);letter-spacing:.06em;text-transform:uppercase}
+  .step h3{margin:6px 0;color:var(--s900)}
+  .step p{color:var(--muted);font-size:15px}
+
+  /* Quote */
+  .quote{background:var(--s900);color:var(--s100);text-align:center;border-radius:28px;padding:56px 28px;margin:0 22px}
+  .quote .sa{font-size:clamp(20px,3vw,28px);font-family:"Noto Serif Devanagari","Noto Sans Devanagari",serif;line-height:1.7;color:#fff}
+  .quote .en{margin-top:16px;color:var(--s300);font-size:16px}
+  .quote .ref{margin-top:8px;font-size:13px;color:var(--s400);letter-spacing:.08em;text-transform:uppercase}
+
+  /* CTA + footer */
+  .cta{text-align:center}
+  footer{border-top:1px solid var(--line);padding:34px 0 44px;font-size:14px;color:var(--muted)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  footer ul{display:flex;flex-wrap:wrap;gap:18px;list-style:none}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--s700)}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo">ॐ</span>Hindu Prayer</a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#daily">Your day</a></li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="om" aria-hidden="true">ॐ</div>
+    <h1>Hindu Prayer<br><span>Sanatani Panchang</span></h1>
+    <p class="lead">Your daily Sanatan companion — accurate Panchang for your location, a Bhagavad Geeta verse every morning, Virtual Darshan, Jap Mala and Kundli, all in one calm, beautiful app.</p>
+    <div class="stores">
+      <a class="btn btn-dark" href="https://apps.apple.com/app/id6832107948" rel="noopener">
+        <span style="font-size:24px" aria-hidden="true"></span>
+        <span><small>Download on the</small><b>App Store</b></span>
+      </a>
+      
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.the_hindu_way" rel="noopener">
+        <span style="font-size:22px" aria-hidden="true">▶</span>
+        <span><small>Get it on</small><b>Google Play</b></span>
+      </a>
+    </div>
+    <div class="langs" aria-label="Available languages">
+      <span>English</span><span>हिन्दी</span><span>ગુજરાતી</span><span>नेपाली</span>
+      <span>தமிழ்</span><span>Deutsch</span><span>Русский</span><span>日本語</span>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <p class="eyebrow">Everything in one place</p>
+    <h2>Rooted in tradition, built for today</h2>
+    <p class="sub">Calculated for wherever you are in the world — sunrise, tithi and muhurat follow your own location and time zone.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ic">📅</div>
+        <h3>Daily Panchang</h3>
+        <p>Tithi, nakshatra, yoga, karana, sunrise and sunset, Rahu Kaal and auspicious muhurat — with Purnimant or Amavasyant calendars.</p>
+      </div>
+      <div class="card">
+        <div class="ic">📖</div>
+        <h3>Daily Geeta Verse</h3>
+        <p>A Bhagavad Geeta shloka each morning with its meaning, and audio in your language where available.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🛕</div>
+        <h3>Virtual Darshan</h3>
+        <p>Visit your favourite deities and temples anytime, keep your own My Temples list and offer your prayers.</p>
+      </div>
+      <div class="card">
+        <div class="ic">📿</div>
+        <h3>Jap Mala</h3>
+        <p>Count your mantra jap with a digital mala — 108 beads, gentle feedback and your daily progress.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🪐</div>
+        <h3>Kundli &amp; Kundli Milan</h3>
+        <p>Birth chart, planetary positions, dashas and doshas, plus guna matching for marriage compatibility.</p>
+      </div>
+      <div class="card">
+        <div class="ic">✨</div>
+        <h3>Horoscope</h3>
+        <p>Your daily rashi phal for all twelve signs, to begin the day with clarity.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🪔</div>
+        <h3>Daily Journey</h3>
+        <p>Take a morning sankalp, note what might get in the way, and reflect on your day each evening.</p>
+      </div>
+      <div class="card">
+        <div class="ic">🔔</div>
+        <h3>Gentle Reminders</h3>
+        <p>A temple-bell reminder for your Geeta verse and darshan, in your chosen language, at the times you choose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rhythm" id="daily">
+  <div class="wrap">
+    <p class="eyebrow">A sacred rhythm</p>
+    <h2>Your day with Hindu Prayer</h2>
+    <p class="sub">Small, mindful moments from sunrise to sunset.</p>
+    <div class="steps">
+      <div class="step"><div class="t">Brahma muhurat</div><h3>Read the Geeta</h3><p>Wake up to today's verse and its meaning.</p></div>
+      <div class="step"><div class="t">Morning</div><h3>Check the Panchang</h3><p>See today's tithi and plan around Rahu Kaal.</p></div>
+      <div class="step"><div class="t">Anytime</div><h3>Darshan &amp; Jap</h3><p>Visit your temples and complete your mala.</p></div>
+      <div class="step"><div class="t">Sandhya</div><h3>Reflect</h3><p>Look back on your sankalp as the day closes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Verse">
+  <div class="quote">
+    <p class="sa">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</p>
+    <p class="en">You have a right to your actions, but never to their fruits.</p>
+    <p class="ref">Bhagavad Geeta 2.47</p>
+  </div>
+</section>
+
+<section class="cta" id="download">
+  <div class="wrap">
+    <p class="eyebrow">Free to download</p>
+    <h2>Begin your journey today</h2>
+    <p class="sub">Available on iPhone and Android.</p>
+    <div class="stores">
+      <a class="btn btn-dark" href="https://apps.apple.com/app/id6832107948" rel="noopener">
+        <span style="font-size:24px" aria-hidden="true"></span>
+        <span><small>Download on the</small><b>App Store</b></span>
+      </a>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.the_hindu_way" rel="noopener">
+        <span style="font-size:22px" aria-hidden="true">▶</span>
+        <span><small>Get it on</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="support">
+  <div class="wrap">
+    <div>© <span id="yr">2026</span> Hoenkava · Hindu Prayer – Sanatani Panchang</div>
+    <ul>
+      <!-- TODO: point these to your real pages / email -->
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="mailto:support@example.com">Contact Support</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
